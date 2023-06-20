@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/Questrial-Regular.ttf');
+
+}
+
+body {
+    background-image: url('../assets/bgRest.jpg');
+    background-color: #262626;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 70vh;
+    background-attachment: fixed;
+    background-color: #333333d7;
+}
+
+html {
+    margin: 0;
+}
+
+.welcome {
+    color: #fff;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    padding: .8ch;
+    font-family: 'MyFont';
+    letter-spacing: .15em;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.paragraph {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    max-width: fit-content;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.ul-list {
+    padding-top: .5rem;
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+    gap: 2ch;
+    color: white;
+    font-size: 32px;
+    font-family: MyFont;
+    letter-spacing: 0.1em;
+}
+
+.ul-list li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width : 481px) {
+    .ul-list {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+        min-height: 40vh;
+    }
+}
