@@ -38,17 +38,17 @@ html {
     margin: auto;
     max-width: fit-content;
     color: rgb(255, 255, 255);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .ul-list {
-    padding-top: .5rem;
+    padding-top: 1ch;
     display: flex;
     margin: 0;
     justify-content: space-evenly;
     gap: 2ch;
     color: white;
-    font-size: 32px;
+    font-size: 40px;
     font-family: MyFont;
     letter-spacing: 0.1em;
 }
@@ -89,5 +89,6 @@ html {
         justify-content: center !important;
         align-items: center;
         min-height: 40vh;
+        font-size: 40px;
     }
 }
