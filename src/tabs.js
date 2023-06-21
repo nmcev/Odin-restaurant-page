@@ -4,6 +4,7 @@ import { contactPage } from './contact.js';
 
 export function switchingTabs() {
     const contentDiv = document.querySelector('#content');
+    const ulDiv = document.createElement('div');
 
     const ulElement = document.createElement('ul');
     ulElement.className = 'ul-list'
@@ -47,5 +48,6 @@ export function switchingTabs() {
     ulElement.appendChild(menuLi);
     ulElement.appendChild(contactLi);
 
-    contentDiv.appendChild(ulElement);
+    ulDiv.appendChild(ulElement);
+    contentDiv.appendChild(ulDiv);
 }
