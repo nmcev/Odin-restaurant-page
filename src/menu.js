@@ -1,14 +1,35 @@
-import { switchingTabs } from "./tabs.js"
+import { createHomePage } from './pageLoad.js'
+import { contactPage } from './contact.js';
 export function menuPage() {
     const contentDiv = document.querySelector('#content');
+
     const h1 = document.createElement('h1');
-    h1.textContent = "Menu page";
+    h1.textContent = "Menu Page";
     h1.classList.add("menu-h1");
-    // appending the card in the menu page ,
+
     contentDiv.appendChild(h1);
-    contentDiv.appendChild(switchingTabs())
+    createTabs();
+    const cardsContainer = document.createElement('div');
+    cardsContainer.classList.add("cards-container");
+    contentDiv.appendChild(cardsContainer) // contentDiv > cardsContainer;
+
+    const cards = [
+        { title: "Cheese Burger", price: "9.99", description: "lorem and something" },
+        { title: "Taboula", price: "5.25", description: "lorem and something" },
+        { title: "Pizza", price: "15.90", description: "lorem and something" },
+        { title: "Salad", price: "20.00", description: "lorem and something" },
+        { title: "Kabab", price: "20.00", description: "lorem and something" },
+        { title: "Cake", price: "20.00", description: "lorem and something" },
+    ];
+    // creating multiple cards
+    for (let i = 0; i < cards.length; i++) {
+        createCard(cards[i]);
+        cardsContainer.appendChild(document.querySelector(`#content > .cards`));
+    };
 };
-function createCard() {
+
+function createCard(cardData) {
+    const { title, price, description } = cardData
     const contentDiv = document.querySelector('#content');
     // card
     const cardsDiv = document.createElement('div');
@@ -23,12 +44,12 @@ function createCard() {
     cardDiv.appendChild(cardImgDiv);
     const cardTitleDiv = document.createElement('div');
     cardTitleDiv.classList.add('card-title');
-    cardTitleDiv.textContent = ` cheese Burger`;
+    cardTitleDiv.textContent = title;
     cardDiv.appendChild(cardTitleDiv);
 
     const cardSubtitleDiv = document.createElement('div');
     cardSubtitleDiv.classList.add('card-subtitle');
-    cardSubtitleDiv.textContent = "lorem akjfhafdh kalsjdflkj  sthis this ";
+    cardSubtitleDiv.textContent = description;
     cardDiv.appendChild(cardSubtitleDiv);
 
     const hr = document.createElement('hr');
@@ -43,7 +64,7 @@ function createCard() {
     const dollarSpan = document.createElement('span');
     dollarSpan.textContent = '$';
     cardPriceDiv.appendChild(dollarSpan);
-    cardPriceDiv.innerHTML += `5.99`;
+    cardPriceDiv.innerHTML += `${price}`
     cardFooterDiv.appendChild(cardPriceDiv);
     const cardBtn = document.createElement('button');
     cardBtn.classList.add('card-btn');
@@ -68,3 +89,52 @@ function createCard() {
     contentDiv.appendChild(cardsDiv);
     // /card ends 
 }
+
+function createTabs() {
+    const contentDiv = document.querySelector('#content');
+    const ulDiv = document.createElement('div');
+
+    const ulElement = document.createElement('ul');
+    ulElement.className = 'ul-list'
+
+    const homeLi = document.createElement('li');
+    const menuLi = document.createElement('li');
+    const contactLi = document.createElement('li');
+
+    homeLi.id = 'home';
+    menuLi.id = 'menu';
+    contactLi.id = 'contact';
+
+    const liElements = [homeLi, menuLi, contactLi];
+
+    liElements.forEach(li => {
+        li.style.cursor = 'pointer';
+        li.className = "li hover-underline-animation"
+    });
+    homeLi.textContent = 'Home';
+    menuLi.textContent = 'Menu';
+    contactLi.textContent = 'Contact';
+
+
+
+    menuLi.addEventListener('click', () => {
+        contentDiv.innerHTML = '';
+        contentDiv.appendChild(menuPage());
+    });
+    contactLi.addEventListener('click', () => {
+        contentDiv.innerHTML = '';
+        contentDiv.appendChild(contactPage());
+    });
+    homeLi.addEventListener('click', () => {
+        contentDiv.innerHTML = '';
+        const homepageContent = createHomePage();
+        contentDiv.appendChild(homepageContent);
+    });
+
+    ulElement.appendChild(homeLi);
+    ulElement.appendChild(menuLi);
+    ulElement.appendChild(contactLi);
+
+    ulDiv.appendChild(ulElement);
+    contentDiv.appendChild(ulDiv);
+};
