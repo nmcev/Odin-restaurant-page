@@ -31,6 +31,7 @@ export const contactPage = () => {
     map.height = "450";
     map.style.border = 0;
     map.loading = "lazy";
+    map.className = "map-frame"
     container.appendChild(map);
     contentDiv.appendChild(container);
     contentDiv.appendChild(formDiv);
