@@ -176,6 +176,20 @@
     min-height: 21vh;
 }
 
+#content>div.cards-container>div:nth-child(6)>div>div.card-img>div {
+    background-image: url('../assets/fanta.png');
+}
+
+#content>div.cards-container>div:nth-child(7)>div>div.card-img>div {
+    background-image: url('../assets/water.png');
+    padding-top: .9ch ;
+    height: 23vh;
+}
+
+#content>div.cards-container>div:nth-child(8)>div>div.card-img>div {
+    background-image: url('../assets/cake.png');
+    width: 100%;
+}
 @media screen and (max-width: 768px) {
     .cards-container {
         gap: 3rem;

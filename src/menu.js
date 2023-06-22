@@ -20,8 +20,8 @@ export function menuPage() {
         { title: "Salad", price: "10.00", description: "lorem and something" },
         { title: "Pepsi", price: "3.00", description: "lorem and something" },
         { title: "Fanta", price: "3.00", description: "lorem and something" },
-        { title: "Seven Up", price: "3.00", description: "lorem and something" },
-        { title: "Red Bull", price: "5.00", description: "lorem and something" },
+        { title: "water", price: "5.00", description: "lorem and something" },
+        { title: "Cake", price: "5.00", description: "lorem and something" },
     ];
     // creating multiple cards
     for (let i = 0; i < cards.length; i++) {
