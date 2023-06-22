@@ -15,11 +15,13 @@ export function menuPage() {
 
     const cards = [
         { title: "Cheese Burger", price: "9.99", description: "lorem and something" },
-        { title: "Taboula", price: "5.25", description: "lorem and something" },
+        { title: "Taboula", price: "7.25", description: "lorem and something" },
         { title: "Pizza", price: "15.90", description: "lorem and something" },
-        { title: "Salad", price: "20.00", description: "lorem and something" },
-        { title: "Kabab", price: "20.00", description: "lorem and something" },
-        { title: "Cake", price: "20.00", description: "lorem and something" },
+        { title: "Salad", price: "10.00", description: "lorem and something" },
+        { title: "Pepsi", price: "3.00", description: "lorem and something" },
+        { title: "Fanta", price: "3.00", description: "lorem and something" },
+        { title: "Seven Up", price: "3.00", description: "lorem and something" },
+        { title: "Red Bull", price: "5.00", description: "lorem and something" },
     ];
     // creating multiple cards
     for (let i = 0; i < cards.length; i++) {
