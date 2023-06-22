@@ -9,3 +9,22 @@
     font-weight: 500;
     font-size: 50px;
 }
+
+.contact-container {
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-content: center;
+    margin: 10ch auto;
+    min-height: 20vh;
+    max-width: 40vw;
+    padding-top: 7ch;
+    padding-bottom: 7ch;
+    gap: 3ch;
+}
+
+.email-form {
+    background-color: #ffffffd4;
+    padding: 2ch;
+    font-weight: 500;
+    font-size: 18px;
+}
