@@ -7,7 +7,7 @@ export function switchingTabs() {
     const ulDiv = document.createElement('div');
 
     const ulElement = document.createElement('ul');
-    ulElement.className = 'ul-list'
+    ulElement.className = 'ul-list-home'
 
     const homeLi = document.createElement('li');
     const menuLi = document.createElement('li');
