@@ -91,4 +91,7 @@ html {
         min-height: 40vh;
         font-size: 40px;
     }
+    .paragraph {
+        text-align: center;
+    }
 }
