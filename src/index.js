@@ -10,6 +10,4 @@ import './styles/menuPage.css';
 document.addEventListener('DOMContentLoaded', () => {
     switchingTabs();
     createHomePage();
-    menuPage();
-    contactPage();
 });

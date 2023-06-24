@@ -67,16 +67,15 @@ function createTabs() {
 
     menuLi.addEventListener('click', () => {
         contentDiv.innerHTML = '';
-        contentDiv.appendChild(menuPage());
+        menuPage();
     });
     contactLi.addEventListener('click', () => {
         contentDiv.innerHTML = '';
-        contentDiv.appendChild(contactPage());
+        contactPage();
     });
     homeLi.addEventListener('click', () => {
         contentDiv.innerHTML = '';
-        const homepageContent = createHomePage();
-        contentDiv.appendChild(homepageContent);
+        createHomePage();
     });
 
     ulElement.appendChild(homeLi);

@@ -20,5 +20,5 @@ export function createHomePage() {
     homepageContainer.appendChild(paragraph);
 
     contentDiv.appendChild(homepageContainer);
-    contentDiv.appendChild(switchingTabs());
+    switchingTabs();
 }
